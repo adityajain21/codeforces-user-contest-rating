@@ -1,13 +1,17 @@
 import requests
-from flask import Flask, render_template, request, json
+from flask import Flask, render_template, request, json, redirect, url_for
 status = Flask(__name__)
 
 @status.route("/")
 def main() :
 	return render_template("index.html")
 
-@status.route("/func", methods = ['POST'])
+@status.route("/func", methods = ['GET','POST'])
 def func() :
+	
+	if(request.method != 'POST'):
+		return redirect(url_for("main"))
+	
 	codeforces_api_link = "http://codeforces.com/api/user.rating?handle="
 	
 	string_query = request.form['handle']
@@ -35,10 +39,6 @@ def func() :
 
 	adi=json.dumps(adi)
 	return adi
-
-
-
-
 
 if __name__ == "__main__" :
 	status.run()
