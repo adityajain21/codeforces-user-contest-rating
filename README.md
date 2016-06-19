@@ -4,7 +4,7 @@ You enter your **Codeforces handle** and Accuracy shows you the details of all t
 
 ## TO RUN:
 + Go to directory containing file.
-```python
+```shell
 $ python status.py
 ```
 + Go to http://localhost:5000
