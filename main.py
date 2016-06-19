@@ -33,9 +33,15 @@ data=data['result']
 
 no_of_contest=len(data)
 
+print("\n\nUser Handle:" + string_query)
+
+print("Total rated contests participated:\t" + str(no_of_contest))
+print("\n")
+
+print("oldRating\tnewRating")
 for i in data:
-	print (i['oldRating'] + "  " + i['newRating'])
-	print("\n")
+	print (str(i['oldRating']) + "\t\t" + str(i['newRating']))
+#	print i['newRating']
 
 
 exit()
