@@ -1,17 +1,3 @@
-'''
-
-api call 		http://codeforces.com/api/user.rating?handle=aditya_jain
-
-get data in list
-
-count number of contest
-
-for each contest: old rating, new rating, number of submissions, succesful submissions. accuracy percentage.
-
-
-
-'''
-
 import sys
 import requests
 import json
